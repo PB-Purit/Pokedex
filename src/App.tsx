@@ -211,14 +211,14 @@ function App() {
               Previous
             </button>
             <div className="flex gap-2">
-              {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+              {Array.from({ length: Math.min(3, totalPages) }, (_, i) => {
                 let pageNumber;
-                if (totalPages <= 5) {
+                if (totalPages <= 3) {
                   pageNumber = i + 1;
                 } else if (currentPage <= 3) {
                   pageNumber = i + 1;
-                } else if (currentPage >= totalPages - 2) {
-                  pageNumber = totalPages - 4 + i;
+                } else if (currentPage >= totalPages - 3) {
+                  pageNumber = totalPages - 3 + i;
                 } else {
                   pageNumber = currentPage - 2 + i;
                 }
